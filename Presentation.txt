@@ -1,0 +1,20 @@
+# BarberShop - Apresentação
+
+## Visão Geral
+Breve descrição do projeto.
+
+## Objetivos
+- Objetivo 1
+- Objetivo 2
+- Objetivo 3
+
+## Funcionalidades Principais
+- Funcionalidade 1
+- Funcionalidade 2
+- Funcionalidade 3
+
+## Tecnologias Utilizadas
+- Tecnologia 1
+- Tecnologia 2
+
+## Estrutura do Projeto
