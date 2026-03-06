@@ -6,6 +6,8 @@ import Dashboard from './Dashboard';
 import CadastroPage from './CadastroPage';
 import BarbeirosPage from './BarbeirosPage';
 import EditarPage from './EditarPage';
+import AgendamentoPage from './AgendamentoPage';
+import ClientePage from './ClientePage';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/cadastro" element={<CadastroPage />} />
             <Route path="/barbeiros" element={<BarbeirosPage />} />
             <Route path="/barbeiros/:id/editar" element={<EditarPage />} />
+            <Route path="/agendamento" element={<AgendamentoPage />} />
+            <Route path="/cliente" element={<ClientePage />} />
           </Routes>
         </main>
       </div>

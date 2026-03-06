@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   BarChart,
   Bar,
@@ -75,8 +76,18 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h1>Dashboard</h1>
-        <p>Visão geral da barbearia</p>
+        <div>
+          <h1>Dashboard</h1>
+          <p>Visão geral da barbearia</p>
+        </div>
+        <div className="header-buttons">
+          <Link to="/cliente" className="btn-secondary">
+            Novo Cliente
+          </Link>
+          <Link to="/agendamento" className="btn-primary">
+            Novo Agendamento
+          </Link>
+        </div>
       </div>
 
       {loading ? (
