@@ -15,53 +15,78 @@ O BarberShop é uma aplicação web desenvolvida para facilitar o agendamento de
 
 ## Tecnologias Utilizadas
 
-- **Frontend**: [Tecnologia usada, ex: React, HTML/CSS/JavaScript]
-- **Backend**: [Tecnologia usada, ex: Node.js, Python/Django]
-- **Banco de Dados**: [Tecnologia usada, ex: MongoDB, PostgreSQL]
-- **Outros**: [Outras ferramentas, ex: Docker, Git]
+- **Frontend**: React (create-react-app)
+- **Backend**: Node.js com Express
+- **Banco de Dados**: MongoDB (via Mongoose)
+- **Outros**: dotenv para variáveis de ambiente, CORS para comunicação entre cliente e servidor
 
-*Nota: As tecnologias específicas podem variar dependendo da implementação atual. Consulte o código fonte para detalhes.*
+*Nota: a estrutura do projeto está dividida em duas pastas dentro de `Aplicação`: `backend` e `frontend`. O backend expõe uma API REST e o frontend consome essa API.*
 
 ## Instalação
 
-### Pré-requisitos
+### ⚠️ Pré-requisito: MongoDB
 
-- Node.js (versão 14 ou superior)
-- npm ou yarn
-- Banco de dados (ex: MongoDB ou PostgreSQL)
+Você precisa de um banco de dados MongoDB. Escolha uma opção:
 
-### Passos para Instalação
+**Opção A - Recomendada (Sem instalar nada):** 
+👉 [MongoDB Atlas - Nuvem Grátis](SETUP-ATLAS.md)
 
-1. Clone o repositório:
+**Opção B - Instalar Localmente:**
+- Windows: Baixe em https://www.mongodb.com/try/download/community
+- macOS: `brew install mongodb-community`
+- Linux: Veja https://docs.mongodb.com/manual/installation/
+
+### Backend
+
+1. Acesse a pasta do backend:
    ```bash
-   git clone https://github.com/werdelesmarcio/BarberShop.git
-   cd BarberShop
+   cd backend
    ```
-
 2. Instale as dependências:
    ```bash
    npm install
-   # ou
-   yarn install
    ```
-
-3. Configure o banco de dados:
-   - Crie um banco de dados local ou configure uma conexão com um banco remoto.
-   - Atualize as configurações de conexão no arquivo de configuração (ex: `.env`).
-
-4. Execute as migrações (se aplicável):
+3. Crie um arquivo `.env` baseado no `.env.example`:
    ```bash
-   npm run migrate
+   cp .env.example .env
    ```
+   Configure `MONGO_URI` e `PORT` conforme necessário.
 
-5. Inicie o servidor:
+4. Inicie o servidor:
    ```bash
    npm start
-   # ou para desenvolvimento
+   # ou com auto-reload:
    npm run dev
    ```
 
-6. Acesse a aplicação em `http://localhost:3000` (ou a porta configurada).
+A API ficará disponível em `http://localhost:5000` por padrão.
+
+### Frontend
+
+1. Acesse a pasta do frontend:
+   ```bash
+   cd frontend
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
+
+O cliente roda em `http://localhost:3000` e faz requisições à API do backend.
+
+---
+
+### 🚀 Início Rápido
+
+Veja [QUICK-START.md](QUICK-START.md) para um guia passo a passo.
+
+---
+
+Você pode abrir dois terminais, um em cada pasta, para rodar backend e frontend simultaneamente.
 
 ## Uso
 
